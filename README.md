@@ -9,7 +9,6 @@ R 4.0.2 version (The program runs only in the R version 4.0.2, no older or lates
   - Link to download hibayes 1.0.0 -> https://cran.r-project.org/src/contrib/Archive/hibayes/hibayes_1.0.0.tar.gz
   - After downloading hibayes_1.0.0.tar.gz file, run following command in the R interface to install hibayes 1.0.0
       > install.packages("hibayes_1.0.0.tar.gz")
-    
 - xgboost (to execute XGBoost model)
 - e1071 (to execute SVM model)
 - lightgbm (to execute LightGBM model)
