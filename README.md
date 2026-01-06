@@ -111,35 +111,34 @@ Users can also use their own files to execute the script. To do this, they must 
 **NOTE:** User must impute values in a genotypic file to infer missing genotypes (SNPs) in their dataset.
 
 Here are few changes they can make in the R script:
-- chr
+- chr (variable stores identifiers for genotypic file name for each chromosome)
 
         [20] > chr <-c("1A","1B","1D","2A","2B","2D","3A","3B","3D","4A","4B","4D","5A","5B","5D","6A","6B","6D","7A","7B","7D")
   
-- If user is using their own file they can change values for the chromosome's name identifiers.
-
-  For example:
+   - If the user is using their own genotypic file, they can either rename it to match the provided file names or proceed by following the steps below.
   
-        [20] > chr <-c("1","2","3","4","5") # If name is chromosome_1_genotype.txt, chromosome_2_genotype.txt, chromosome_3_genotype.txt, chromosome_4_genotype.txt, chromosome_5_genotype.txt
+     For example:
+  
+         [20] > chr <-c("1","2","3","4","5") # If name is chromosome_1_genotype.txt, chromosome_2_genotype.txt, chromosome_3_genotype.txt, chromosome_4_genotype.txt, chromosome_5_genotype.txt
           
-  OR
+     OR
           
-        [20] > chr <-c("A","B","C","D","E") # If name is chromosome_A_genotype.txt, chromosome_B_genotype.txt, chromosome_C_genotype.txt, chromosome_D_genotype.txt, chromosome_E_genotype.txt
+         [20] > chr <-c("A","B","C","D","E") # If name is chromosome_A_genotype.txt, chromosome_B_genotype.txt, chromosome_C_genotype.txt, chromosome_D_genotype.txt, chromosome_E_genotype.txt
           
 - y (phenotypic file) represents the numeric vector of trait values for n lines/individuals
 
         [26] > y <- read.table("D1_reg_20_21_numeric.txt", header=TRUE) # user can add their own phenotypic file in place of D1_reg_20_21_numeric.txt
     
-- nexp (number of times the number of experiments need to be repeated). The user can modify how many times the experiments are repeated by replacing the value against _nexp_, the default value is 20.
+- nexp (number of times the experiments need to be repeated). The user can modify how many times the experiments are repeated by replacing the value against _nexp_, the default value is 20.
  
         [23] > nexp <- 20
           
-- path (genotypic files represents the data frame of n rows and m columns, where n is the number of lines/individuals and m is the number of markers)
+- path (variable contain path for genotypic files)
 
         [78] > path <- paste("imputed_std_",chr[i],"_chr_genotype.txt", sep="")
-          
-- If user is using their own file they can change the path as follows:
+   -  If user is using their own file they can change the path as follows:
 
-        [78] > path <- paste("chromosome_",chr[i],"_genotype.txt", sep="") # If name is chromosome_1_genotype.txt or chromosome_A_genotype.txt
+           [78] > path <- paste("chromosome_",chr[i],"_genotype.txt", sep="") # If name is chromosome_1_genotype.txt or chromosome_A_genotype.txt
         
 - Now save and execute the _**CFMS.R**_ script.
 
