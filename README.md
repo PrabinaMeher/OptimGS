@@ -106,7 +106,7 @@ Phenotypic file
         C:/PROGRA~1/R/R-4.0.2/bin/Rscript CFMS.R
   
 # Executing the script using user-provided files
-Users can also use their own files to execute the script. To do this, they must place their phenotypic and genotypic files in the working directory. The genotypic data should be provided as separate files, each containing marker information for an individual chromosome.
+Users can also execute the script using their own files. To do this, they must place their phenotypic and genotypic files in the working directory. The genotypic data should be provided as separate files, each containing marker information for an individual chromosome.
 
 **NOTE:** User must impute values in a genotypic file to infer missing genotypes (SNPs) in their dataset.
 
@@ -136,14 +136,19 @@ Here are few changes they can make in the R script:
 - path (variable contain path for genotypic files)
 
         [78] > path <- paste("imputed_std_",chr[i],"_chr_genotype.txt", sep="")
-   -  If user is using their own file they can change the path as follows:
+   -  User can change the path as follows:
 
            [78] > path <- paste("chromosome_",chr[i],"_genotype.txt", sep="") # If name is chromosome_1_genotype.txt or chromosome_A_genotype.txt
         
 - Now save and execute the _**CFMS.R**_ script.
 
 # Output description
-There are four steps in the script, and each step generates output files which will be used in the next step correspondingly. The output files are as follows:
+The script consists of four steps. Each step produces output files that are used as inputs for the corresponding subsequent step.
 ### Step I
-First 20 iteration will be generated for each chromosome for each model. Each file’s first column lists the observed values and rest 20 columns represent predicted values for each chromosome.
+In the first step, 20 iterations (_nexp_) are generated for each of the fourteen models. This results in a total of 280 files. In each file, the first column contains the observed values, while the remaining 21 columns represent the predicted values for each chromosome.
 
+### Step II
+In the second step all the predicted values for each chromosomes are combined into a single column for each iteration and a table is created as follows
+
+### Step III
+In the third step the iteration for each model is placed in a same for each model
