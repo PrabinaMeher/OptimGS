@@ -67,7 +67,7 @@ R script to run prediction using 14 models independently for each chromosome
 ### D1_reg_20_21_numeric.txt
 Phenotypic file
 
-### Genotypic files containing markers for each of the 20 chromosomes
+### Genotypic files containing markers for each of the 21 chromosomes
 - imputed_std_1A_chr_genotype.txt
 - imputed_std_1B_chr_genotype.txt
 - imputed_std_1D_chr_genotype.txt
@@ -131,6 +131,6 @@ Here are few changes they can make in the R script:
 
 # Output description
 There are four steps in the script, and each step generates output files which will be used in the next step correspondingly. The output files are as follows:
-### 1_pred_BayesA_result.txt
-First iteration will be generated for each chromosome. Each file’s first column lists the observed values and rest 20 columns represent predicted values for each chromosome. The second column displays the PCC values along with their standard errors, while the third column presents the MSE values and their respective standard errors.
+### Step I
+First 20 iteration will be generated for each chromosome for each model. Each file’s first column lists the observed values and rest 20 columns represent predicted values for each chromosome. The second column displays the PCC values along with their standard errors, while the third column presents the MSE values and their respective standard errors.
 
