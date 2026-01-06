@@ -108,14 +108,16 @@ Phenotypic file
 # Running script using user's files
 If user wants to use their own phenotypic and genotypic files. They can make a phenotypic file containing trait values and separate genotypic files containing markers for each chromosome.
 Here are few changes they can make in the R script:
-- chr (variable contains chromosome byse genotypic files name identifiers)
+- chr
+
         [20] > chr <-c("1A","1B","1D","2A","2B","2D","3A","3B","3D","4A","4B","4D","5A","5B","5D","6A","6B","6D","7A","7B","7D")
   
 - If user is using their own file they can change values for the chromosome's name identifiers.
-       For example:
+  For example:
+  
         [20] > chr <-c("1","2","3","4","5") # If name is chromosome_1_genotype.txt, chromosome_2_genotype.txt, chromosome_3_genotype.txt, chromosome_4_genotype.txt, chromosome_5_genotype.txt
           
-       OR
+  OR
           
         [20] > chr <-c("A","B","C","D","E") # If name is chromosome_A_genotype.txt, chromosome_B_genotype.txt, chromosome_C_genotype.txt, chromosome_D_genotype.txt, chromosome_E_genotype.txt
           
