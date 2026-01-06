@@ -145,5 +145,5 @@ Here are few changes they can make in the R script:
 # Output description
 There are four steps in the script, and each step generates output files which will be used in the next step correspondingly. The output files are as follows:
 ### Step I
-First 20 iteration will be generated for each chromosome for each model. Each file’s first column lists the observed values and rest 20 columns represent predicted values for each chromosome. The second column displays the PCC values along with their standard errors, while the third column presents the MSE values and their respective standard errors.
+First 20 iteration will be generated for each chromosome for each model. Each file’s first column lists the observed values and rest 20 columns represent predicted values for each chromosome.
 
