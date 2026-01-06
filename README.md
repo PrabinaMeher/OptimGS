@@ -8,7 +8,7 @@ R 4.0.2 version (The program runs only in the R version 4.0.2, no older or lates
 - hibayes 1.0.0 (install only version 1.0.0, no older or latest version will work) #to execute 8 Bayesian models
   - Link to download hibayes 1.0.0 -> https://cran.r-project.org/src/contrib/Archive/hibayes/hibayes_1.0.0.tar.gz
   - After downloading hibayes_1.0.0.tar.gz file, run following command in the R interface to install hibayes 1.0.0
-> install.packages("hibayes_1.0.0.tar.gz")
+        > install.packages("hibayes_1.0.0.tar.gz")
 - xgboost (to execute XGBoost model)
 - e1071 (to execute SVM model)
 - lightgbm (to execute LightGBM model)
@@ -67,34 +67,33 @@ R script to run prediction using 14 models independently for each chromosome
 ### D1_reg_20_21_numeric.txt
 Phenotypic file
 
-## Genotypic files containing markers for each of the 20 chromosomes
-### imputed_std_1A_chr_genotype.txt
-### imputed_std_1B_chr_genotype.txt
-### imputed_std_1D_chr_genotype.txt
-### imputed_std_2A_chr_genotype.txt
-### imputed_std_2B_chr_genotype.txt
-### imputed_std_2D_chr_genotype.txt
-### imputed_std_3A_chr_genotype.txt
-### imputed_std_3B_chr_genotype.txt
-### imputed_std_3D_chr_genotype.txt
-### imputed_std_4A_chr_genotype.txt
-### imputed_std_4B_chr_genotype.txt
-### imputed_std_4D_chr_genotype.txt
-### imputed_std_5A_chr_genotype.txt
-### imputed_std_5B_chr_genotype.txt
-### imputed_std_5D_chr_genotype.txt
-### imputed_std_6A_chr_genotype.txt
-### imputed_std_6B_chr_genotype.txt
-### imputed_std_6D_chr_genotype.txt
-### imputed_std_7A_chr_genotype.txt
-### imputed_std_7B_chr_genotype.txt
-### imputed_std_7D_chr_genotype.txt
+### Genotypic files containing markers for each of the 20 chromosomes
+- imputed_std_1A_chr_genotype.txt
+- imputed_std_1B_chr_genotype.txt
+- imputed_std_1D_chr_genotype.txt
+- imputed_std_2A_chr_genotype.txt
+- imputed_std_2B_chr_genotype.txt
+- imputed_std_2D_chr_genotype.txt
+- imputed_std_3A_chr_genotype.txt
+- imputed_std_3B_chr_genotype.txt
+- imputed_std_3D_chr_genotype.txt
+- imputed_std_4A_chr_genotype.txt
+- imputed_std_4B_chr_genotype.txt
+- imputed_std_4D_chr_genotype.txt
+- imputed_std_5A_chr_genotype.txt
+- imputed_std_5B_chr_genotype.txt
+- imputed_std_5D_chr_genotype.txt
+- imputed_std_6A_chr_genotype.txt
+- imputed_std_6B_chr_genotype.txt
+- imputed_std_6D_chr_genotype.txt
+- imputed_std_7A_chr_genotype.txt
+- imputed_std_7B_chr_genotype.txt
+- imputed_std_7D_chr_genotype.txt
 
 # Usage 
 - Create a working directory.
 - Place all the downloaded files in the working directory.
 - Now set working directory by executing following command on the R interface.
-
         > setwd("path/to/your/working/directory")
 - Execute the _**CFMS.R**_ script.
         path/to/R-4.0.2/Rscript <script.R>
