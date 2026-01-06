@@ -148,7 +148,7 @@ The script consists of four steps. Each step produces output files that are used
 In the first step, 20 iterations (_nexp_) are generated for each of the fourteen models. This results in a total of 280 files. In each file, the first column contains the observed values, while the remaining 21 columns represent the predicted values for each chromosome.
 
 ### Step II
-In the second step all the predicted values for each chromosomes are combined into a single column for each iteration and a table is created as follows
+In the second step all the predicted values for each chromosomes are combined into a single column for each model and a table is created as follows
 
 ### Step III
-In the third step the iteration for each model is placed in a same for each model
+
