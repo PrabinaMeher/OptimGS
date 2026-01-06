@@ -106,9 +106,9 @@ Phenotypic file
         C:/PROGRA~1/R/R-4.0.2/bin/Rscript CFMS.R
   
 # Executing the script using user-provided files
-Users can also use their own files to execute the script. If users want to work with their own phenotypic and genotypic data, they can create a phenotypic file that includes the trait values and separate genotypic files that contain marker information for each chromosome.
+Users can also use their own files to execute the script. To do this, they must place their phenotypic and genotypic files in the working directory. The genotypic data should be provided as separate files, each containing marker information for an individual chromosome.
 
-
+**NOTE:** User must impute values in a genotypic file to infer missing genotypes (SNPs) in their dataset.
 
 Here are few changes they can make in the R script:
 - chr
