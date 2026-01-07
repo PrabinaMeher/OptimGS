@@ -1,5 +1,5 @@
 
-setwd("/Users/assiyaafroz/Desktop/optimization/source_code/D1")
+# setwd("/Users/assiyaafroz/Desktop/optimization/source_code/D1")
 
 ##########################################STEP-I####################
 #Prediction using 14 models independently for each chromosome###############
