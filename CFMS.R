@@ -75,7 +75,11 @@ res_rf[,1] <- as.matrix(y3, nrow=tst, ncol=1)
 res_xgb[,1] <- as.matrix(y3, nrow=tst, ncol=1)
 
 for(i in 1:nchr){
+<<<<<<< HEAD
 path <- paste("imputed_std_",chr[i],"_chr_genotype.txt", sep="")
+=======
+path <- paste(chr[i],"_chr_genotype.txt", sep="")
+>>>>>>> 01041ee (Files add)
 
 x <- read.table(path)
 x1 <- x[sam,] 
