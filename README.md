@@ -133,6 +133,12 @@ Here are few changes they can make in the R script:
  
         [23] > nexp <- 20
         
+- path (variable contain genotypic files name)
+        [78] > path <- paste(chr[i],"_chr_genotype.txt", sep="")
+          
+       - If user is using their own file they can change the path as follows:
+        [78] > path <- paste(chr[i],"_chr.txt", sep="") # if name is 1_chr.txt or A_chr.txt
+
 - Now save and execute the _**CFMS.R**_ script.
 
 # Output description
