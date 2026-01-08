@@ -137,7 +137,8 @@ Here are few changes they can make in the R script:
         [78] > path <- paste(chr[i],"_chr_genotype.txt", sep="")
           
    - If user is using their own file they can change the path as follows:
-        [78] > path <- paste(chr[i],"_chr.txt", sep="") # if name is 1_chr.txt or A_chr.txt
+
+         [78] > path <- paste(chr[i],"_chr.txt", sep="") # if name is 1_chr.txt or A_chr.txt
 
 - Now save and execute the _**CFMS.R**_ script.
 
