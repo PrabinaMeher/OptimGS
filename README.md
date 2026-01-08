@@ -148,7 +148,7 @@ The script consists of four steps. Each step produces output files that are used
 ### Step I
 In the first step, 20 iterations (_nexp_) are generated for each of the 14 models. This results in a total of 280 files. In each file, the first column contains the observed values, while the remaining 21 columns represent the predicted values for each chromosome. Predictions were generated for the test set only, comprising 20% of the total observations in each iteration. For example table below shows the observed and predicted values for each chromosome for a single iteration and a model.
 
-|observed|1A|1B|1D|2A|2B|2D|3A|3B|3D|4A|4B|4D|5A|5B|5D|6A|6B|6D|7A|7B|7D|
+|Observed|1A|1B|1D|2A|2B|2D|3A|3B|3D|4A|4B|4D|5A|5B|5D|6A|6B|6D|7A|7B|7D|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |0.155517104602023|0.162396675210736|0.160386145998778|0.191315258500127|0.258499672768336|0.288096849473802|0.257089954576361|0.272394645258858|0.173515045978323|0.297996643044949|0.0134002220580925|0.122920271469284|0.218790707989406|0.181541179641292|0.0800374678755906|0.152688176621581|0.283626960727921|-0.000313155045115465|0.0534153688069817|0.219863072530596|0.0720656298737513|-0.104806717355989|
 |0.155517104602023|0.241984384231317|0.0261374874877208|0.138058560865701|0.219964135418048|0.190292232960879|0.255060021669742|0.164616657734068|0.173069285035167|0.250332006256634|0.0167578485357712|0.180985951709752|0.112919071478468|0.184486436205154|0.182097769347044|0.0983055368721676|0.29163228838498|0.0357676178860765|0.140102719739309|0.333200773087979|0.110358027399231|-0.178741903012493|
@@ -158,7 +158,7 @@ In the first step, 20 iterations (_nexp_) are generated for each of the 14 model
 ### Step II
 In the second step for a given model, predicted values across the 21 chromosomes were combined into a single column for each iteration. For each model, a single file was generated containing 20 columns, where each column corresponds to one iteration (Iteration 1 to Iteration 20). Thus, a total of 14 files were generated in this step, one for each prediction model.
 
-|Iteration_1|Iteration_2|Iteration_3|Iteration_4|Iteration_5|Iteration_6|Iteration_7|Iteration_8|Iteration_9|Iteration_10|Iteration_11|Iteration_12|Iteration_13|Iteration_14|Iteration_15|Iteration_16|Iteration_17|Iteration_18|Iteration_19|Iteration_20|
+|iteration_1|iteration_2|iteration_3|iteration_4|iteration_5|iteration_6|iteration_7|iteration_8|iteration_9|iteration_10|iteration_11|iteration_12|iteration_13|iteration_14|iteration_15|iteration_16|iteration_17|iteration_18|iteration_19|iteration_20|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |0.100687965705974|0.208188404706812|0.0531620439633187|-0.362868469431555|0.0436156534648539|0.103769605893534|0.296313286734221|0.0381274385453611|-0.123643163312644|0.115376251035698|0.120145377853713|0.356320051098519|0.0305568269110522|-0.105882716969421|0.0303906116995809|0.171052056581153|0.254390130729998|0.0882431066017334|-0.155167506958281|0.143950708204475|
 |-0.0309659236803847|0.202350467395532|-0.102882052216382|-0.0733696373430139|-0.39303322324581|-0.0151810020680457|0.296890607365013|-0.173205505726525|0.100317452636061|-0.125639992375757|0.0391096331706689|0.357603615069786|-0.169796988547644|0.0978987081306641|-0.214031206078897|0.0888770807303007|0.234655138778589|-0.117813861617527|0.0782200686963474|-0.096823910579727|
@@ -169,7 +169,7 @@ In the second step for a given model, predicted values across the 21 chromosomes
 ### Step III
 In the third step, the data were reorganized to facilitate model-wise comparison across iterations. For each iteration, a separate file was generated and each file contains 15 columns. The first column corresponds to the observed values for the test set, taken from the Step I output. The remaining 14 columns represent the combined predicted values from each of the eight prediction models for that iteration. As a result, 20 files were generated in this step, one for each iteration.
 
-|observed|BayesCpi|BayesA|BayesL|BayesR|BayesB|BayesC|BayesBpi|BayesRR|gblup|rrblup|rf|xgb|svm|lgbm|
+|Observed|BayesCpi|BayesA|BayesL|BayesR|BayesB|BayesC|BayesBpi|BayesRR|gblup|rrblup|rf|xgb|svm|lgbm|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |0.155517104602023|0.1897665792317|0.100687965705974|0.160568028679981|0.161634956001077|0.103769605893534|0.171052056581153|0.120145377853713|0.120744260604229|0.195861733063588|0.139709093818644|0.181172204050498|0.158149710610513|0.434519317969138|0.461126261160716|
 |0.155517104602023|0.0971626667100704|-0.0309659236803847|0.0523072142552085|0.0548821218920502|-0.0151810020680457|0.0888770807303007|0.0391096331706689|0.00598407475951763|0.0859914576386341|0.0276395096294818|0.431439485446347|0.650405284844075|0.573651435490874|0.614810760556217|
