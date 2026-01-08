@@ -137,7 +137,7 @@ Here are few changes they can make in the R script:
 
         [78] > path <- paste(chr[i],"_chr_genotype.txt", sep="")
           
-   - If user is using their own file they can change the path as follows:
+   - If users are executing the script using their own file they can change the path as follows:
 
          [78] > path <- paste(chr[i],"_chr.txt", sep="") # if name is 1_chr.txt or A_chr.txt
 
@@ -146,7 +146,7 @@ Here are few changes they can make in the R script:
 # Output description
 The script consists of four steps. Each step produces output files that are used as inputs for the corresponding subsequent step.
 ### Step I
-In the first step, 20 iterations (_nexp_) are generated for each of the 14 models. This results in a total of 280 files. In each file, the first column contains the observed values, while the remaining 21 columns represent the predicted values for each chromosome. Predictions were generated for the test set only, comprising 20% of the total observations in each iteration. For example table below shows the observed and predicted values for each chromosome for a single iteration and a model.
+In the first step, 20 iterations (_nexp_) are generated for each of the 14 models. This results in a total of 280 files. In each file, the first column contains the observed values, while the remaining 21 columns represent the predicted values for each chromosome. Predictions were generated for the test set, comprising 20% of the total observations in each iteration. For example table below shows the observed and predicted values for each chromosome for a single iteration and a model.
 
 |Observed|1A|1B|1D|2A|2B|2D|3A|3B|3D|4A|4B|4D|5A|5B|5D|6A|6B|6D|7A|7B|7D|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -156,7 +156,7 @@ In the first step, 20 iterations (_nexp_) are generated for each of the 14 model
 |0.155517104602023|0.323286159126824|0.16934148051842|0.193710994464954|-0.0720555310125469|0.14896144596482|0.153773079511267|0.229123635003441|0.178819259283488|0.233002937282297|0.00172909577667508|0.101952839460856|0.041024454361542|0.0680755791309632|0.15786065607628|-0.013892675331955|0.213131763566052|0.0661759693730492|0.251600194070809|0.16788815599906|0.0903316115560668|0.031849361147589|
 
 ### Step II
-In the second step for a given model, predicted values across the 21 chromosomes were combined into a single column for each iteration. For each model, a single file was generated containing 20 columns, where each column corresponds to one iteration (Iteration 1 to Iteration 20). Thus, a total of 14 files were generated in this step, one for each prediction model.
+In Step II for a given model, predicted values across the 21 chromosomes were combined into a single column for each iteration. For each model, a single file was generated containing 20 columns, where each column corresponds to one iteration (Iteration 1 to Iteration 20). Thus, a total of 14 files were generated in this step, one for each prediction model.
 
 |iteration_1|iteration_2|iteration_3|iteration_4|iteration_5|iteration_6|iteration_7|iteration_8|iteration_9|iteration_10|iteration_11|iteration_12|iteration_13|iteration_14|iteration_15|iteration_16|iteration_17|iteration_18|iteration_19|iteration_20|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -167,7 +167,7 @@ In the second step for a given model, predicted values across the 21 chromosomes
 |-0.4121849024621|-0.0322102202448225|-0.552154792233793|-0.249005895014858|-0.147717508729136|-0.361065607572011|0.0650386842175002|-0.524566280120704|-0.067538159613168|-0.0517128901833933|-0.307677392736597|0.123702899884505|-0.499150433842542|-0.0755774235853188|-0.132287471430794|-0.252419101263438|0.0240302443627998|-0.431814795467318|-0.0948301440001798|-0.0120220887052506|
 
 ### Step III
-In the third step, the data were reorganized to facilitate model-wise comparison across iterations. For each iteration, a separate file was generated and each file contains 15 columns. The first column corresponds to the observed values for the test set, taken from the Step I output. The remaining 14 columns represent the combined predicted values from each of the eight prediction models for that iteration. As a result, 20 files were generated in this step, one for each iteration.
+In the third step, the data were reorganized to facilitate model-wise comparison across iterations. For each iteration, a separate file was generated and each file contains 15 columns. The first column corresponds to the observed values for the test set, taken from the Step I output. The remaining 14 columns represent the combined predicted values from each of the 14 prediction models for that iteration. As a result, 20 files were generated in this step, one for each iteration.
 
 |Observed|BayesCpi|BayesA|BayesL|BayesR|BayesB|BayesC|BayesBpi|BayesRR|gblup|rrblup|rf|xgb|svm|lgbm|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -177,7 +177,7 @@ In the third step, the data were reorganized to facilitate model-wise comparison
 |0.155517104602023|0.178071741338455|0.039096769817626|0.149227350359213|0.146984276691963|0.0991186516566065|0.176536985539715|0.130651717661322|0.08900304487657|0.17623023635644|0.117662371580922|0.203564759996764|-0.0269077449053597|0.183839868220156|0.15397070821182|
 
 ### Step IV
-In the fourth and final step, predicted values for each model obtained from Step III were further combined. For each iteration, predicted values across all models were combined into a single column. The final output consists of a single table in which each column corresponds to an iteration (Iteration 1 to Iteration 20), containing the combined predicted values of models for the respective iteration.
+In the fourth and final step, predicted values for each model obtained from Step III were further combined. For each iteration, predicted values across all models were combined into a single column. The final output consists of a single table in which each column corresponds to an iteration (Iteration 1 to Iteration 20), containing the combined predicted values of the models for the respective iteration. In addition to the final prediction output, a separate file was generated to store the observed values across all iterations.
 
 |iteration_1|iteration_2|iteration_3|iteration_4|iteration_5|iteration_6|iteration_7|iteration_8|iteration_9|iteration_10|iteration_11|iteration_12|iteration_13|iteration_14|iteration_15|iteration_16|iteration_17|iteration_18|iteration_19|iteration_20|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
