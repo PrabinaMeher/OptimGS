@@ -39,27 +39,27 @@ R 4.0.2 version (The program runs only in the R version 4.0.2, no older or lates
 # Download files
 - CFMS.R
 - D1_reg_20_21_numeric.txt
-- imputed_std_1A_chr_genotype.txt
-- imputed_std_1B_chr_genotype.txt
-- imputed_std_1D_chr_genotype.txt
-- imputed_std_2A_chr_genotype.txt
-- imputed_std_2B_chr_genotype.txt
-- imputed_std_2D_chr_genotype.txt
-- imputed_std_3A_chr_genotype.txt
-- imputed_std_3B_chr_genotype.txt
-- imputed_std_3D_chr_genotype.txt
-- imputed_std_4A_chr_genotype.txt
-- imputed_std_4B_chr_genotype.txt
-- imputed_std_4D_chr_genotype.txt
-- imputed_std_5A_chr_genotype.txt
-- imputed_std_5B_chr_genotype.txt
-- imputed_std_5D_chr_genotype.txt
-- imputed_std_6A_chr_genotype.txt
-- imputed_std_6B_chr_genotype.txt
-- imputed_std_6D_chr_genotype.txt
-- imputed_std_7A_chr_genotype.txt
-- imputed_std_7B_chr_genotype.txt
-- imputed_std_7D_chr_genotype.txt
+- 1A_chr_genotype.txt
+- 1B_chr_genotype.txt
+- 1D_chr_genotype.txt
+- 2A_chr_genotype.txt
+- 2B_chr_genotype.txt
+- 2D_chr_genotype.txt
+- 3A_chr_genotype.txt
+- 3B_chr_genotype.txt
+- 3D_chr_genotype.txt
+- 4A_chr_genotype.txt
+- 4B_chr_genotype.txt
+- 4D_chr_genotype.txt
+- 5A_chr_genotype.txt
+- 5B_chr_genotype.txt
+- 5D_chr_genotype.txt
+- 6A_chr_genotype.txt
+- 6B_chr_genotype.txt
+- 6D_chr_genotype.txt
+- 7A_chr_genotype.txt
+- 7B_chr_genotype.txt
+- 7D_chr_genotype.txt
 
 # File description
 ### CFMS.R
@@ -69,27 +69,27 @@ R script to run prediction using 14 models independently for each chromosome
 Phenotypic file
 
 ### Genotypic files containing markers for each of the 21 chromosomes
-- imputed_std_1A_chr_genotype.txt
-- imputed_std_1B_chr_genotype.txt
-- imputed_std_1D_chr_genotype.txt
-- imputed_std_2A_chr_genotype.txt
-- imputed_std_2B_chr_genotype.txt
-- imputed_std_2D_chr_genotype.txt
-- imputed_std_3A_chr_genotype.txt
-- imputed_std_3B_chr_genotype.txt
-- imputed_std_3D_chr_genotype.txt
-- imputed_std_4A_chr_genotype.txt
-- imputed_std_4B_chr_genotype.txt
-- imputed_std_4D_chr_genotype.txt
-- imputed_std_5A_chr_genotype.txt
-- imputed_std_5B_chr_genotype.txt
-- imputed_std_5D_chr_genotype.txt
-- imputed_std_6A_chr_genotype.txt
-- imputed_std_6B_chr_genotype.txt
-- imputed_std_6D_chr_genotype.txt
-- imputed_std_7A_chr_genotype.txt
-- imputed_std_7B_chr_genotype.txt
-- imputed_std_7D_chr_genotype.txt
+- 1A_chr_genotype.txt
+- 1B_chr_genotype.txt
+- 1D_chr_genotype.txt
+- 2A_chr_genotype.txt
+- 2B_chr_genotype.txt
+- 2D_chr_genotype.txt
+- 3A_chr_genotype.txt
+- 3B_chr_genotype.txt
+- 3D_chr_genotype.txt
+- 4A_chr_genotype.txt
+- 4B_chr_genotype.txt
+- 4D_chr_genotype.txt
+- 5A_chr_genotype.txt
+- 5B_chr_genotype.txt
+- 5D_chr_genotype.txt
+- 6A_chr_genotype.txt
+- 6B_chr_genotype.txt
+- 6D_chr_genotype.txt
+- 7A_chr_genotype.txt
+- 7B_chr_genotype.txt
+- 7D_chr_genotype.txt
 
 # Usage 
 - Create a working directory.
@@ -119,11 +119,11 @@ Here are few changes they can make in the R script:
   
      For example:
   
-         [20] > chr <-c("1","2","3","4","5") # If name is chromosome_1_genotype.txt, chromosome_2_genotype.txt, chromosome_3_genotype.txt, chromosome_4_genotype.txt, chromosome_5_genotype.txt
+         [20] > chr <-c("1","2","3","4","5") # If name is 1_chr_genotype.txt, 2_chr_genotype.txt, 3_chr_genotype.txt, 4_chr_genotype.txt, 5_chr_genotype.txt
           
      OR
           
-         [20] > chr <-c("A","B","C","D","E") # If name is chromosome_A_genotype.txt, chromosome_B_genotype.txt, chromosome_C_genotype.txt, chromosome_D_genotype.txt, chromosome_E_genotype.txt
+         [20] > chr <-c("A","B","C","D","E") # If name is A_chr_genotype.txt, B_chr_genotype.txt, C_chr_genotype.txt, D_chr_genotype.txt, E_chr_genotype.txt
           
 - y (phenotypic file) represents the numeric vector of trait values for n lines/individuals
 
@@ -132,13 +132,6 @@ Here are few changes they can make in the R script:
 - nexp (number of times the experiments need to be repeated). The user can modify how many times the experiments are repeated by replacing the value against _nexp_, the default value is 20.
  
         [23] > nexp <- 20
-          
-- path (variable contain path for genotypic files)
-
-        [78] > path <- paste("imputed_std_",chr[i],"_chr_genotype.txt", sep="")
-   -  User can change the path as follows:
-
-           [78] > path <- paste("chromosome_",chr[i],"_genotype.txt", sep="") # If name is chromosome_1_genotype.txt or chromosome_A_genotype.txt
         
 - Now save and execute the _**CFMS.R**_ script.
 
