@@ -36,7 +36,7 @@ R 4.0.2 version (The program runs only in the R version 4.0.2, no older or lates
     RF
     XGB
 
-# Download files
+# Download script and sample files
 - CFMS.R
 - D1_reg_20_21_numeric.txt
 - 1A_chr_genotype.txt
