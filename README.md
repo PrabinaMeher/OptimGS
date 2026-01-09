@@ -1,5 +1,5 @@
 # Overview
-
+We proposed a dual integrative genomic prediction framework designed to enhance prediction accuracy by sequentially integrating information across chromosomes and across models. We implemented 14 genomic prediction models spanning Bayesian, BLUP-based, and machine learning approaches. Genome-wide markers were first partitioned chromosome-wise, and predictions were generated independently for each chromosome. These predictions were then optimally combined using genetic algorithm: chromosome-first-model-second (CFMS). Prediction performance was assessed through repeated five-fold cross-validation schemes, with Pearson’s correlation coefficient and mean squared error as performance metrics. The CFMS strategy consistently outperformed individual models and conventional whole-genome approaches across all datasets. Overall, the proposed framework provides a robust and biologically meaningful strategy for improving genomic prediction of complex quantitative traits and holds broad potential for accelerating crop improvement programs.
 
 # Requirements
 R 4.0.2 version (The program runs only in the R version 4.0.2, no older or latest version will work)
